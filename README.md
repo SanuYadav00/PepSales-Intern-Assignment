@@ -82,10 +82,16 @@ RABBITMQ_URL=amqps://localhost
 - For **Twilio**, get your credentials and phone number from the [Twilio Console](https://www.twilio.com/console).
 
 ### 5. **Start the API server**
-`node index.js`
+<pre>
+  node index.js
+</pre>
 
 ### 6. **Start the worker (in a separate terminal)**
-`node worker.js`
+<pre>
+  node worker.js
+</pre>
+
+### 7. **The API will be available at http://localhost:3000**
 ---
 
 ## 🧑‍💻 API Endpoints
@@ -95,7 +101,7 @@ RABBITMQ_URL=amqps://localhost
 - **Body:**
 <pre>{
 "userId": "user@example.com or phone number or userId",
-"type": "email" | "sms" | "in-app",
+"type": "email" or "sms" or "in-app",
 "message": "Your notification message"
 }</pre>
 
@@ -145,10 +151,19 @@ RABBITMQ_URL=amqps://localhost
 ---
 
 ## 🧪 Testing
-
+- Start both the API server and worker.
 - Use **Postman**, **Hoppscotch**, or **curl** to test API endpoints.
 - Check your email inbox or SMS phone for real notifications.
 - Review logs in the `logs/` directory for delivery status and errors.
+
+  **Example (Using Curl)**
+  <pre>
+    curl -X POST -H "Content-Type: application/json" -d '{
+   "userId": "test@example.com",
+   "type": "email",
+   "message": "Test notification"
+   }' http://localhost:3000/notifications
+  </pre>
 
 ---
 
@@ -156,6 +171,15 @@ RABBITMQ_URL=amqps://localhost
 
 - If a notification fails to send, it is retried up to 3 times.
 - After 3 failures, the notification status is set to `"failed"` in MongoDB.
+
+---
+
+## 🛠️ Troubleshooting
+- **Email not sending:** Verify your Gmail app password is correct and less 
+  secure apps are allowed.
+- **SMS not sending:** Check your Twilio credentials and phone number format.
+- **Queue not processing:** Ensure RabbitMQ is running and the worker is started.
+- **Database issues:** Verify MongoDB connection string and that the service is running.
 
 ---
 

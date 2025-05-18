@@ -125,7 +125,7 @@ node worker.js
 
 ## 📁 Project Structure
 
-.
+<pre>
 ├── db.js # MongoDB connection and Notification model
 ├── index.js # Express API server, queue producer
 ├── logger.js # Custom logger (file + console)
@@ -134,6 +134,7 @@ node worker.js
 ├── worker.js # Queue consumer/worker
 ├── .env.example # Sample environment config
 └── README.md
+</pre>
 
 ---
 

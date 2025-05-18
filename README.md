@@ -58,8 +58,6 @@ Implements queue-based processing and automatic retries for failed notifications
 </pre>
 
 
-text
-
 ### 3. **Set up MongoDB and RabbitMQ**
 - **MongoDB:**  
   - Install and start MongoDB locally, or use a cloud MongoDB URI.
@@ -70,17 +68,13 @@ text
 
 Create a `.env` file in the project root:
 <pre>
-MONGODB_URI=mongodb://127.0.0.1:27017/pepsales
-RABBITMQ_URL=amqp://127.0.0.1
-
-Email (Gmail SMTP)
-EMAIL_USER=your.email@gmail.com
+MONGODB_URI=mongodb://localhost:27017/pepsales
+EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your_gmail_app_password
-
-Twilio (SMS)
 TWILIO_SID=your_twilio_account_sid
 TWILIO_AUTH=your_twilio_auth_token
 TWILIO_PHONE=your_twilio_phone_number
+RABBITMQ_URL=amqps://localhost
 </pre>
 
 
@@ -88,12 +82,10 @@ TWILIO_PHONE=your_twilio_phone_number
 - For **Twilio**, get your credentials and phone number from the [Twilio Console](https://www.twilio.com/console).
 
 ### 5. **Start the API server**
-`npm start`
-or (if you use nodemon for development)
-`npm run dev`
+`node index.js`
 
-### 6. **Start the worker**
-node worker.js
+### 6. **Start the worker (in a separate terminal)**
+`node worker.js`
 ---
 
 ## 🧑‍💻 API Endpoints

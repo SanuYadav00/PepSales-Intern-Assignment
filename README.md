@@ -1,8 +1,8 @@
 # PepSales Notification Service
 
-A robust backend notification system for sending **Email**, **SMS**, and **In-App** notifications to users, built with **Node.js**, **Express**, **MongoDB**, and **RabbitMQ**.  
+**A robust backend notification system for sending **Email**, **SMS**, and **In-App** notifications to users, built with **Node.js**, **Express**, **MongoDB**, and **RabbitMQ**.  
 Supports real delivery for Email (via Gmail) and SMS (via Twilio), with in-app notifications stored in the database.  
-Implements queue-based processing and automatic retries for failed notifications.
+Implements queue-based processing and automatic retries for failed notifications.**
 
 ---
 

@@ -172,6 +172,6 @@ This project is for the PepSales internship assignment and is provided for educa
 ## 🙋‍♂️ Questions or Issues?
 
 - For setup issues, first check your `.env` file and service credentials.
-- For code or feature questions, please contact [YOUR EMAIL] or open an issue on GitHub.
+- For code or feature questions, please contact sanuyadav00007@gmail.com or open an issue on GitHub.
 
 ---

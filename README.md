@@ -125,6 +125,70 @@ RABBITMQ_URL=amqps://localhost
 
 ---
 
+## 🌐 Live Deployment
+Access the deployed API here:
+🔗 https://pepsales-intern-assignment-production.up.railway.app/
+
+## How to Use the Deployed API
+**✅ Create a Notification**
+
+POST /notifications
+
+URL:
+<pre>
+ https://pepsales-intern-assignment-production.up.railway.app/notifications 
+</pre>
+
+Request Body (for email)
+<pre>
+  json
+{
+  "userId": "test@example.com",
+  "type": "email",
+  "message": "This is an email notification"
+}
+</pre>
+
+Request Body (for SMS)
+<pre>
+  json
+{
+  "userId": "+91xxxxxxxxx", // I am using a free account so notifications can be sent to only verfied numbers in my twilio account.It won't work for any other numbers.Use this number (+918340150160) for testing purpose.
+  "type": "sms",
+  "message": "This is an SMS notification"
+}
+</pre>
+
+Request Body (for in-app):
+<pre>
+  json
+{
+  "userId": "user123",
+  "type": "in-app",
+  "message": "This is an in-app notification"
+}
+</pre>
+
+
+**📥 Get User Notifications**
+
+GET /users/:id/notifications Example:
+
+For email:
+<pre>
+  https://pepsales-intern-assignment-production.up.railway.app/users/test@example.com/notifications
+</pre>
+
+For SMS (phone):
+<pre>
+  https://pepsales-intern-assignment-production.up.railway.app/users/+91xxxxxxxxxx/notifications
+</pre>
+
+For In-App(user ID):
+<pre>
+  https://pepsales-intern-assignment-production.up.railway.app/users/user123/notifications
+</pre>
+---
 ## 📁 Project Structure
 
 <pre>

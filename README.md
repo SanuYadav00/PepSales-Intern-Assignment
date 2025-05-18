@@ -46,13 +46,17 @@ Implements queue-based processing and automatic retries for failed notifications
 ## 📦 Installation & Setup
 
 ### 1. **Clone the repository**
-git clone https://github.com/YOUR_USERNAME/pepsale-notification-service.git
-cd pepsale-notification-service
+<pre>
+  git clone https://github.com/YOUR_USERNAME/pepsale-notification-service.git
+  cd pepsale-notification-service
+</pre>
 
-text
 
 ### 2. **Install dependencies**
-npm install
+<pre>
+  npm install
+</pre>
+
 
 text
 

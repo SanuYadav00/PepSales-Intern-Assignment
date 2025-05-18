@@ -21,6 +21,10 @@ async function connectQueue() {
   logger.info("Connected to RabbitMQ");
 }
 
+app.get("/",(req,res) => {
+  res.send("Service is working");
+});
+
 app.post("/notifications", async (req, res) => {
   const { userId, type, message } = req.body;
 

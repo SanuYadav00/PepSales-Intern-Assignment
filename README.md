@@ -47,8 +47,8 @@ Implements queue-based processing and automatic retries for failed notifications
 
 ### 1. **Clone the repository**
 <pre>
-  git clone https://github.com/YOUR_USERNAME/pepsale-notification-service.git
-  cd pepsale-notification-service
+  git clone https://github.com/SanuYadav00/PepSales-Intern-Assignment
+  cd pepsales-intern-assignment
 </pre>
 
 
